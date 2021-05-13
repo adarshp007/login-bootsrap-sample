@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-login
-</body>
-</html>
+{% extends 'nav.html' %}
+{% block content %}
+
+
+<div class="container">
+    <div class="justify-content-center ">
+        <h1><U>Login</U></h1>
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+       <h2> Username</h2>
+        <input type="text" placeholder="Username">
+        <br>
+        <h2>Password</h2>
+        <input type="text" placeholder="Password">
+        <br>
+        <br>
+<input type="submit" value="Login" class="btn btn-primary" style="width: 180px;">
+             </form>
+    </div>
+</div>
+
+
+{% endblock %}
