@@ -8,7 +8,7 @@
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" width="60" height="60"><span style="font-weight: 700;font-family:'Berlin Sans FB'; color: grey">We Keep</span></a>
@@ -30,6 +30,10 @@
     </div>
   </div>
 </nav>
+    <div class="container">
+        {% block  content%}
+        {% endblock %}
+    </div>
 </div>
 
 </body>

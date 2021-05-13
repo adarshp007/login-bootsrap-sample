@@ -1,10 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-signup
-</body>
-</html>
+{% extends 'nav.html' %}
+{% block content %}
+<div class="container">
+    <h1><u>Sign Up</u></h1>
+     <h6>Please fill This form to create an account</h6>
+    <form action="{% url 'signup' %}" method="post">
+        {% csrf_token %}
+    <h4> First Name</h4>
+        <input type="text" placeholder="First Name">
+        <br>
+        <h4>Last Name</h4>
+        <input type="text" placeholder="Last Name">
+        <br>
+                <h4>Email</h4>
+        <input type="text" placeholder="Email">
+        <br>
+        <h4>Phone</h4>
+        <input type="text" placeholder="Phone">
+        <br>
+        <h4>Password</h4>
+        <input type="text" placeholder="Password">
+        <br>
+        <h4>Confirm Password</h4>
+        <input type="text" placeholder="Confirm Password">
+        <br>
+<br>
+
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn  btn-primary " style="width: 100px;">Sign Up</button>
+            <button type="button" class="btn btn-danger" style="width: 100px;">Cancel</button>
+
+
+</div>
+
+</form>
+
+</div>
+{% endblock %}
